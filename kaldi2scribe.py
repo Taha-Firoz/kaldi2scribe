@@ -6,7 +6,7 @@ from kaldi.decoder import LatticeFasterDecoderOptions
 from kaldi.util.table import SequentialMatrixReader, SequentialWaveReader
 
 
-ap = argparse.ArgumentParser(prog="model2transcription", usage="%(prog)s --modelroot '/wsj/s5' --kaldiroot '/kaldi' --type 'tri1' --input '/transcription_test'")
+ap = argparse.ArgumentParser(prog="kaldi2scribe", usage="%(prog)s --modelroot '/wsj/s5' --kaldiroot '/kaldi' --type 'tri1' --input '/transcription_test'", description='A quick and dirty way to transcribe audio with your trained Kaldi model')
 ap.add_argument("-m", "--modelroot", required=True,
 	help="root directory for the model")
 ap.add_argument("-k", "--kaldiroot", required=True,
